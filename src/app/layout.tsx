@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import { Navbar } from "../components/Navbar/navbar";
 import Footer from "@/components/footer/Footer";
 import { Metadata } from "next";
+import ScrollToTop from "@/components/SrollToTop";
 
 const geistSans = localFont({
   src: "../fonts/GeistMonoVF.woff",
@@ -47,7 +48,7 @@ export default function RootLayout({
           <footer className="container mx-auto md:px-0 px-3">
             <Footer />
           </footer>
-
+            <ScrollToTop />
         </Providers>
       </body>
     </html>
