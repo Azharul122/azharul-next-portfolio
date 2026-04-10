@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 // import scrollbarHide from 'tailwind-scrollbar-hide'
 // require('tailwind-scrollbar-hide')
@@ -7,7 +7,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(badge|button|code|input|kbd|link|navbar|toggle|tabs|popover|ripple|spinner).js"
+    "./node_modules/@nextui-org/theme/dist/components/(badge|button|code|input|kbd|link|navbar|toggle|tabs|popover|ripple|spinner).js",
   ],
   theme: {
     extend: {
@@ -25,6 +25,18 @@ const config: Config = {
         designColor: "#ff014f",
         gradientStart: "#C9A44C",
         GradientEnd: "#1a160f",
+      },
+
+      container: {
+        screens: {
+          DEFAULT: "1290px",
+        },
+        center: true,
+        padding: "1.2rem",
+      },
+
+      screens: {
+        xs: "540px",
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",

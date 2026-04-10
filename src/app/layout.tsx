@@ -24,6 +24,9 @@ export const metadata: Metadata = {
 };
 
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+
 
 export default function RootLayout({
   children,
@@ -37,7 +40,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers >
-          <header className="w-full! mx-auto md:px-0 px-3 bg-gray-500">
+          <header className="w-full! mx-auto md:px-0 px-3">
             <Navbar />
           </header>
           {children}
