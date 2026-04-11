@@ -1,19 +1,21 @@
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { Providers } from "./providers";
 import { Navbar } from "../components/Navbar/navbar";
 import Footer from "@/components/footer/Footer";
 import { Metadata } from "next";
 import ScrollToTop from "@/components/SrollToTop";
-import Providers from "./providers";
 import { ThemeProvider } from "next-themes";
+import { Suspense } from "react";
+import { LoadingManager } from "three";
+import { VscLoading } from "react-icons/vsc";
+import { AiOutlineLoading } from "react-icons/ai";
 
 const geistSans = localFont({
   src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-
 const geistMono = localFont({
   src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -35,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en">
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -43,18 +45,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <Providers>
-            <header className="w-full! mx-auto md:px-0 px-3">
-              <Navbar />
-            </header>
-            {children}
-            <footer className="container mx-auto md:px-0 px-3">
-              <Footer />
-            </footer>
-            <ScrollToTop />
-          </Providers>
-        </ThemeProvider>
+        <Suspense fallback={< AiOutlineLoading className="animate-spin text-3xl "/>}>
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <Providers>
+              <header className="w-full! mx-auto md:px-0 px-3">
+                <Navbar />
+              </header>
+              {children}
+              <footer className="container mx-auto md:px-0 px-3">
+                <Footer />
+              </footer>
+              <ScrollToTop />
+            </Providers>
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   );

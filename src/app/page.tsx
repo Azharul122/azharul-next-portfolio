@@ -8,6 +8,7 @@ import Contact from "@/components/contact/Contact";
 
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import Education from "@/components/education/Education";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -35,9 +36,10 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <Hero />
+      <Experience />
       <Tech />
       <ProjectTwo />
-      <Experience />
+      <Education />
       <Contact />
     </div>
   );
