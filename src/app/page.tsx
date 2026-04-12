@@ -9,6 +9,7 @@ import Contact from "@/components/contact/Contact";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import Education from "@/components/education/Education";
+import DemoOne from "@/components/sliders/DemoOne";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -35,6 +36,7 @@ export default function Home() {
   }, [searchParams]);
   return (
     <div className="container mx-auto">
+      <DemoOne />
       <Hero />
       <Experience />
       <Tech />
