@@ -36,13 +36,13 @@ export default function Home() {
   }, [searchParams]);
   return (
     <div className="container mx-auto">
-      <DemoOne />
-      <Hero />
+     <DemoOne /> 
+      {/* <Hero />
       <Experience />
       <Tech />
       <ProjectTwo />
       <Education />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }
