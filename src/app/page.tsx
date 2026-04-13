@@ -37,12 +37,12 @@ export default function Home() {
   return (
     <div className="container mx-auto">
      <DemoOne /> 
-      {/* <Hero />
+      <Hero />
       <Experience />
       <Tech />
       <ProjectTwo />
       <Education />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }
