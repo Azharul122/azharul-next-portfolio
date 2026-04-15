@@ -36,7 +36,7 @@ export default function Home() {
   }, [searchParams]);
   return (
     <div className="container mx-auto">
-     <DemoOne /> 
+     {/* <DemoOne />  */}
       <Hero />
       <Experience />
       <Tech />
