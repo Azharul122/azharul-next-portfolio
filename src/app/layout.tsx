@@ -46,7 +46,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Suspense fallback={< AiOutlineLoading className="animate-spin text-3xl "/>}>
-          <ThemeProvider attribute="class" defaultTheme="">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
               <header className="w-full! mx-auto md:px-0 px-3">
                 <Navbar />
