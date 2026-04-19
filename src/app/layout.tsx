@@ -10,6 +10,7 @@ import { Suspense } from "react";
 import { LoadingManager } from "three";
 import { VscLoading } from "react-icons/vsc";
 import { AiOutlineLoading } from "react-icons/ai";
+import Starbackground from "@/components/Starbackground";
 
 const geistSans = localFont({
   src: "../fonts/GeistMonoVF.woff",
@@ -45,13 +46,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Suspense fallback={< AiOutlineLoading className="animate-spin text-3xl "/>}>
+        <Suspense
+          fallback={<AiOutlineLoading className="animate-spin text-3xl " />}
+        >
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
               <header className="w-full! mx-auto md:px-0 px-3">
                 <Navbar />
               </header>
-              {children}
+              <Starbackground>{children}</Starbackground>
               <footer className="container mx-auto md:px-0 px-3">
                 <Footer />
               </footer>
