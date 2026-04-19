@@ -282,3 +282,34 @@
     transform: translateY(100%);
   }
 }
+
+
+
+/* Moon */
+
+.crescent-link {
+  display: block;
+  width: 180px; height: 180px;
+  text-decoration: none;
+  cursor: pointer;
+  animation: floatMoon 4s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.crescent-link svg {
+  filter: drop-shadow(0 0 18px rgba(160,185,220,0.45))
+          drop-shadow(0 0 40px rgba(100,140,200,0.25));
+}
+.crescent-link:hover {
+  transform: scale(1.05);
+  animation: none;
+}
+@keyframes floatMoon {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.btn-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 9px; letter-spacing: 0.16em;
+  color: rgba(200,220,255,0.85);
+  text-shadow: 0 0 8px rgba(120,160,220,0.7);
+}
