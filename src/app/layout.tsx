@@ -51,11 +51,11 @@ export default function RootLayout({
         >
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Providers>
-              <header className="w-full! mx-auto md:px-0 px-3">
+              <header className="  ">
                 <Navbar />
               </header>
               <Starbackground>{children}</Starbackground>
-              <footer className="container mx-auto md:px-0 px-3">
+              <footer className="container mx-auto ">
                 <Footer />
               </footer>
               <ScrollToTop />
