@@ -24,9 +24,8 @@ const Education = dynamic(() => import("@/components/education/Education"), {
 
 export default function Home() {
   return (
-    <div className="container mx-auto !px-0">
+    <div className="container mx-auto ">
       <ScrollHandler />
-
       <Hero />
       <Experience />
       <Tech />
